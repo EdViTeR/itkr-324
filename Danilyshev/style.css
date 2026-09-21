@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: none;
+    margin: none;
+}
+body{
+    background-color: rgb(21, 19, 21);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    margin: auto;   
+    background: rgb(20, 20, 20);
+    max-width: 1440px;
+    height: 60px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.wrapper{
+    margin: auto;
+    max-width: 1440px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.header-menu{
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    line-height: 60px;
+}
+
+
+.element{
+    height: 300px;
+    background-color: lightcoral;
+    border: none;
+    border-radius: 15px;
+}
+
+.first, .last{
+    height: 60px;
+    border: none;
+}
+.first{
+    color: rgb(255, 255, 255);
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 60px;
+}
+
+.last{
+    display: flex;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-button{
+    background-color: rgb(0, 0, 0);
+    width: 52px;
+    height: 52px;
+    border: none;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.f{
+    max-width: 1440px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0 2em;
+    font-family: "JetBrains Mono", sans-serif;
+    font-size: 1.5rem;
+    color: rgb(230, 230, 230);
+}
+
+.liquid-chrome {
+  background: linear-gradient(135deg, #f0f0f0, #7a7a7a, #fff, #111, #fff, #a1a1a1, #f0f0f0);
+  background-size: 400% 400%; /* Увеличиваем масштаб по обеим осям */
+  animation: wave-flow 6s ease infinite;
+}
+
+@keyframes wave-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 100%; } /* Сдвиг по диагонали вниз */
+  100% { background-position: 0% 50%; }
+}
+
+
+/*@media (max-width: 1024px) {
+
+    .wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .f{
+        font-size: 1.5rem;
+    }
+    
+}
+
+/*@media (max-width: 768px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-menu {
+        display: flex;
+        background-color: lightyellow;
+    }
+
+    .second, .last {
+        display: none;
+    }
+
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .first {
+    flex: 1;
+    }
+    .f{
+        font-size: 1.25rem;
+    }
+}
